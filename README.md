@@ -1,10 +1,4 @@
-# libskrand
-
-Library of randomness
-
-ooooooooo
-
-hand wave
+# SKTL::Random
 
 Mersenne Twister, tested against std::mt19937
 
