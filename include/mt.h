@@ -1,7 +1,9 @@
-// Mersenne Twister
+#ifndef _SKTL_RAND_MT_H_
+#define _SKTL_RAND_MT_H_
 
-#ifndef _RAND_MT_H_
-#define _RAND_MT_H_
+namespace SKTL {
+namespace Random {
+namespace MT19937 {
 
 static constexpr int kN = 624;
 static constexpr int kM = 397;
@@ -15,4 +17,8 @@ static int mersenne_twister_index = kN + 1;
 void InitializeGenRand(unsigned long s);
 unsigned long GenRandInt32();
 
-#endif  // _RAND_MT_H_
+}	// namespace MT19937
+}	// namespace Random
+}	// namespace SKTL
+
+#endif	// _SKTL_RAND_MT_H_

@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(xrand
+project(libsktlrand
   VERSION 0.1
-  DESCRIPTION "Experiments in randomness"
+  DESCRIPTION "Samiur's Random library"
   LANGUAGES CXX)
 
-add_library(libskrand STATIC mt.cc mt.h)
-target_compile_features(libskrand PUBLIC cxx_std_11)
+add_library(libsktlrand STATIC src/mt.cc include/mt.h)
+target_compile_features(libsktlrand PUBLIC cxx_std_11)
 
-add_executable(mt_test mt_test.cc)
-target_link_libraries(mt_test PUBLIC libskrand)
+add_executable(mt_test src/mt_test.cc)
+target_link_libraries(mt_test PUBLIC libsktlrand)
