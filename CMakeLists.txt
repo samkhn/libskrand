@@ -14,3 +14,11 @@ target_link_libraries(mt_test PUBLIC sktlrand)
 
 add_executable(lcg_test src/lcg_test.cc)
 target_link_libraries(lcg_test PUBLIC sktlrand)
+
+add_custom_target(check-all
+  DEPENDS mt_test lcg_test
+  COMMAND echo "MT19937:"
+  COMMAND ./mt_test
+  COMMAND echo "LCG:"
+  COMMAND ./lcg_test
+  )
