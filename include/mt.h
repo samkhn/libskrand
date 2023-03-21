@@ -17,8 +17,8 @@ static int mersenne_twister_index = kN + 1;
 void InitializeGenRand(unsigned long s);
 unsigned long GenRandInt32();
 
-}	// namespace MT19937
-}	// namespace Random
-}	// namespace SKTL
+}  // namespace MT19937
+}  // namespace Random
+}  // namespace SKTL
 
-#endif	// _SKTL_RAND_MT_H_
+#endif  // _SKTL_RAND_MT_H_
