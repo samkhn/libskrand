@@ -1,6 +1,10 @@
 # SKTL::Random
 
-Mersenne Twister, tested against std::mt19937
+Provides:
+* Linear Congruential Engine, tested against std::minstd_rand
+* Mersenne Twister, tested against std::mt19937
+
+Check out *_test.cc binaries for how they can be used.
 
 ## Requires
 
