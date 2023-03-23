@@ -5,11 +5,12 @@
 
 int main() {
   unsigned seed = 102013;
-  SKTL::Random::MT19937::InitializeGenRand(seed);
+  SKTL::Random::MT19937::Generator g;
+  g.InitializeGenRand(seed);
   std::mt19937 sg(seed);
   unsigned sktl_n, stl_n;
   for (size_t i = 0; i < 10000; ++i) {
-    sktl_n = SKTL::Random::MT19937::GenRandInt32();
+    sktl_n = g.GenRandInt32();
     stl_n = sg();
     if (sktl_n != stl_n) {
       std::cout << "FAIL: Got " << sktl_n << ". Want: " << stl_n << "\n";
